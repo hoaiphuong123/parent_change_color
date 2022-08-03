@@ -1,0 +1,90 @@
+.Box{
+    display: flex;
+    justify-content: center;
+    margin-top: 240px;
+    margin-left: 40px;
+}
+.MenuBox{
+
+    border: outset;
+    border-width: thin;
+    border-radius:7px;
+    height: 440px;
+    width:900px ;
+    text-align: center;
+    justify-content: center;
+}
+.color1{
+    width: 400px;
+    height: 30px;
+}
+.color2{
+    width: 400px;
+    height: 30px;
+}
+.rowlable1{
+    width: 300px;
+    float: left;
+    padding-left: 20px;
+}
+.square1{
+    width: 70px;
+    height: 20px;
+    background: #f447ff;
+    float: left;
+}
+
+.rowlable2{
+    width: 300px;
+    float: left;
+    padding-left: 10px;
+}
+.square2{
+    width: 70px;
+    height: 20px;
+    background: #32CD32;
+    float-box : left;
+}
+.MyBox{
+    text-align: center;
+}
+.Boxmenu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.Boxmenu1{
+    border: outset;
+    border-width: thin;
+    border-radius:7px;
+    width: 860px;
+    height:150px ;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: #FFC0CB;
+}
+.Boxmenu2{
+    border: outset;
+    border-width: thin;
+    border-radius:7px;
+    width: 860px;
+    height:150px ;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: #00FFFF;
+
+}
+.list{
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+
+
+
+
+
