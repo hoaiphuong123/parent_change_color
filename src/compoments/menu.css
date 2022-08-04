@@ -30,7 +30,7 @@
 .square1{
     width: 70px;
     height: 20px;
-    background: #f447ff;
+    background: #32CD32;
     float: left;
 }
 
@@ -42,7 +42,7 @@
 .square2{
     width: 70px;
     height: 20px;
-    background: #32CD32;
+    background:#f447ff;
     float-box : left;
 }
 .MyBox{
@@ -62,7 +62,7 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    background: #FFC0CB;
+    background: #00FFFF;
 }
 .Boxmenu2{
     border: outset;
@@ -73,7 +73,7 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    background: #00FFFF;
+    background: #FFC0CB;
 
 }
 .list{
