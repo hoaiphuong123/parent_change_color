@@ -7,8 +7,16 @@ import Menu2 from './compoments/menu2';
 function App() {
   const [color1, setColor1] = useState('grey');
   const [color2, setColor2] = useState('Pink');
-  const handleChangeColor = (e) => {
-    console.log(e);
+  const handleChangeColor1 = (e) => {
+    setColor1(e.target.value);
+  };
+  const handleChangeColor2 = (e) => {
+    setColor2(e.target.value);
+  };
+  const changeHandleMenu = (e) => {
+    e.preventDefault();
+    console.log({ color1 });
+    console.log({ color2 });
   };
   return (
     <div className="Box">
@@ -30,9 +38,9 @@ function App() {
             <div className="square2"> </div>
           </div>
         </div>
-        <div className="Boxmenu">
-          <Menu1 onSetColor={handleChangeColor} color={color1} label={'Child 1'} />
-          <Menu2 onSetColor1={handleChangeColor} color1={color2} label1={'Child 2'} />
+        <div className="Boxmenu" onChange={changeHandleMenu}>
+          <Menu1 onSetColor={handleChangeColor1} color={color1} label={'Child 1'} />
+          <Menu2 onSetColor1={handleChangeColor2} color1={color2} label1={'Child 2'} />
         </div>
       </div>
     </div>
