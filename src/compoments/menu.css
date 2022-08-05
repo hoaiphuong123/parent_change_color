@@ -14,6 +14,28 @@
     text-align: center;
     justify-content: center;
 }
+
+.parent{
+    text-align: center;
+}
+.setting{
+    float: right;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+.lablesize{
+    float: left;
+    margin-top: 10px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.boxlable{
+    border: solid;
+    width: 70px;
+    height: 20px;
+    margin-left: 10px;
+}
 .color1{
     width: 400px;
     height: 30px;

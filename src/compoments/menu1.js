@@ -8,7 +8,7 @@ Menu1.propTypes = {
   label: PropTypes.string.isRequired,
 };
 
-export default function Menu1({ color, label, onSetColor }) {
+export default function Menu({ color, label, onSetColor }) {
   return (
     <div className="Boxmenu1">
       <text>{label}</text>

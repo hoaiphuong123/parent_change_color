@@ -8,7 +8,7 @@ Menu2.propTypes = {
   label1: PropTypes.string.isRequired,
 };
 
-export default function Menu2({ onSetColor1, color1, label1 }) {
+export default function Menupa({ onSetColor1, color1, label1 }) {
   return (
     <div className="Boxmenu2">
       <text> {label1}</text>
