@@ -84,7 +84,6 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    background: #00FFFF;
 }
 .Boxmenu2{
     border: outset;
@@ -95,7 +94,7 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    background: #FFC0CB;
+    background-color: #00FFFF;
 
 }
 .list{

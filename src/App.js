@@ -2,17 +2,21 @@ import React, { useState } from 'react';
 import './App.css';
 import './compoments/menu.css';
 import DialogParent from './compoments/Dialog';
-import { Menu1, Menu2 } from './compoments/menuMain';
+import Menu from './compoments/menu1';
 
 function App() {
   const [color1, setColor1] = useState('grey');
-  const [color2, setColor2] = useState('Pink');
+  const [color2, setColor2] = useState('orange');
   const [open, setOpen] = useState(false);
   const [send, setSend] = useState('');
-
+  console.log(send);
   const handleSend = (e) => {
     setSend(e.target.value);
-    console.log('handleSend', e.target.value);
+  };
+
+  const changeHandleSend = (e) => {
+    e.preventDefault();
+    console.log(send);
   };
 
   const HandClickOpen = () => {
@@ -41,7 +45,7 @@ function App() {
   return (
     <div className="Box">
       <div className="MenuBox" onChange={changeHandleMenu}>
-        <button type="button" className="setting" onClick={HandClickOpen}>
+        <button type="button" className="setting" onClick={HandClickOpen} onSubmit={changeHandleSend}>
           Show Setting
         </button>
         <DialogParent open={open} onClose={HandClickClose} onSend={handleSend} />
@@ -49,7 +53,6 @@ function App() {
           <label htmlFor="lable3">kích cỡ mà hình</label>
           <div className="boxlable"> </div>
         </div>
-
         <h3 className="parent">Parent</h3>
         <div className="Boxmenu">
           <div className="color1">
@@ -68,8 +71,8 @@ function App() {
           </div>
         </div>
         <div className="Boxmenu">
-          <Menu1 onSetColor={handleChangeColor1} color={color1} label={'Child 1'} />
-          <Menu2 onSetColor1={handleChangeColor2} color1={color2} label2={'Child 2'} />
+          <Menu onSetColor={handleChangeColor1} color={color1} label={'Child 1'} colorOptions={['grey', 'green', 'pink']} />
+          <Menu onSetColor={handleChangeColor2} color={color2} label={'Child 2'} colorOptions={['orange', 'blue', 'Yellow']} />
         </div>
       </div>
     </div>

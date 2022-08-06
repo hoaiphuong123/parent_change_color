@@ -2,29 +2,25 @@ import React from 'react';
 import './menu.css';
 import PropTypes from 'prop-types';
 
-Menu1.propTypes = {
+Menu.propTypes = {
   onSetColor: PropTypes.func.isRequired,
   color: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
+  colorOptions: PropTypes.array,
 };
-
-export default function Menu({ color, label, onSetColor }) {
+export default function Menu({ color, label, onSetColor, colorOptions }) {
   return (
-    <div className="Boxmenu1">
+    <div className="Boxmenu1" style={{ backgroundColor: color }}>
       <text>{label}</text>
       <form>
         <label>
           <select onChange={onSetColor}>
             <text>{color}</text>
-            <option value="grey" style={{ color: 'grey' }}>
-              grey
-            </option>
-            <option value="black" style={{ color: 'black' }}>
-              black
-            </option>
-            <option value="blue" style={{ color: 'blue' }}>
-              blue
-            </option>
+            {colorOptions.map((op, idx) => (
+              <option key={idx} value={op} style={{ color: op }}>
+                {op}
+              </option>
+            ))}
           </select>
         </label>
       </form>
