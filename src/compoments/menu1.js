@@ -11,11 +11,11 @@ Menu.propTypes = {
 export default function Menu({ color, label, onSetColor, colorOptions }) {
   return (
     <div className="Boxmenu1" style={{ backgroundColor: color }}>
-      <text>{label}</text>
+      {label}
       <form>
         <label>
           <select onChange={onSetColor}>
-            <text>{color}</text>
+            {color}
             {colorOptions.map((op, idx) => (
               <option key={idx} value={op} style={{ color: op }}>
                 {op}

@@ -43,7 +43,7 @@ function Menu1({ color, label, onSetColor }) {
       <form>
         <label>
           <select onChange={onSetColor}>
-            <text>{color}</text>
+            {color}
             <option value="grey" style={{ color: 'grey' }}>
               grey
             </option>

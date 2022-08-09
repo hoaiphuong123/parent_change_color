@@ -51,7 +51,7 @@ function App() {
         <DialogParent open={open} onClose={HandClickClose} onSend={handleSend} />
         <div className="lablesize">
           <label htmlFor="lable3">kích cỡ mà hình</label>
-          <div className="boxlable"> </div>
+          <div className="boxlable"> {send} </div>
         </div>
         <h3 className="parent">Parent</h3>
         <div className="Boxmenu">
@@ -59,7 +59,9 @@ function App() {
             <div className="rowlable1">
               <label htmlFor="lable1"> Màu của child 1</label>
             </div>
-            <div className="square1">{color1}</div>
+            <div className="square1" style={{ backgroundColor: color1 }}>
+              {color1}
+            </div>
           </div>
         </div>
         <div className="Boxmenu">
@@ -67,7 +69,9 @@ function App() {
             <div className="rowlable2">
               <label htmlFor="lable2">Màu của child 2</label>
             </div>
-            <div className="square2">{color2}</div>
+            <div className="square2" style={{ backgroundColor: color2 }}>
+              {color2}
+            </div>
           </div>
         </div>
         <div className="Boxmenu">

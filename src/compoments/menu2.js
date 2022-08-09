@@ -15,7 +15,7 @@ export default function Menupa({ onSetColor1, color1, label1 }) {
       <form>
         <label>
           <select onChange={onSetColor1}>
-            <text>{color1}</text>
+            {color1}
             <option value="Pink" style={{ color: 'Pink' }}>
               Pink
             </option>
