@@ -9,6 +9,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Switch from '@mui/material/Switch';
 import MenuItem from '@mui/material/MenuItem';
+import FormControlLabel from '@mui/material/FormControlLabel';
 import PropTypes from 'prop-types';
 
 DialogParent.propTypes = {
@@ -19,13 +20,17 @@ DialogParent.propTypes = {
 const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
 export default function DialogParent({ onClose, open, onSend }) {
+  const [fullWidth, setFullWidth] = React.useState(true);
   const [maxWidth, setMaxWidth] = React.useState('sm');
-  // const handleMaxWidthChange = (event) => {
-  //   setMaxWidth(
-  //     // @ts-expect-error autofill of arbitrary value is not handled.
-  //     event.target.value,
-  //   );
-  // };
+
+  const handleFullWidthChange = (event) => {
+    setFullWidth(event.target.checked);
+  };
+
+  const handleMaxWidthChange = (event) => {
+    setMaxWidth(event.target.value);
+    onSend(event);
+  };
   return (
     <div>
       <form>
@@ -36,7 +41,7 @@ export default function DialogParent({ onClose, open, onSend }) {
               <Box>
                 <FormControl sx={{ mt: 2, minWidth: 120 }}>
                   <Select
-                    onChange={onSend}
+                    onChange={handleMaxWidthChange}
                     value={maxWidth}
                     inputProps={{
                       name: 'max-width',
@@ -52,7 +57,7 @@ export default function DialogParent({ onClose, open, onSend }) {
                 </FormControl>
                 <DialogContentText>Chế độ sáng tối</DialogContentText>
                 <div>
-                  <Switch {...label} defaultChecked />
+                  <FormControlLabel sx={{ mt: 1 }} control={<Switch checked={fullWidth} onChange={handleFullWidthChange} />} label="Full width" />
                 </div>
               </Box>
             </DialogContent>
